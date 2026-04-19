@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CorreX | Landing de Apresentação</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="bg-orb bg-orb-one" aria-hidden="true"></div>
+	<div class="bg-orb bg-orb-two" aria-hidden="true"></div>
+
+	<header class="topbar">
+		<a href="#inicio" class="brand">CorreX</a>
+		<nav class="menu" aria-label="Menu principal">
+			<a href="#sobre">Sobre</a>
+			<a href="#modulos">Módulos</a>
+			<a href="#planos">Planos</a>
+			<a href="#diferenciais">Diferenciais</a>
+		</nav>
+	</header>
+
+	<main>
+		<section id="inicio" class="hero reveal">
+			<p class="eyebrow">Plataforma de correção de redações com IA</p>
+			<h1>Uma experiência completa para professores corrigirem, revisarem e acompanharem o desempenho com agilidade.</h1>
+			<p class="hero-copy">
+				Esta landing page apresenta o sistema CorreX para demonstração acadêmica: da autenticação até a avaliação por critérios,
+				com dashboard de acompanhamento e organização de turmas.
+			</p>
+
+			<div class="hero-cta">
+				<a href="#modulos" class="btn btn-primary">Ver funcionalidades</a>
+				<a href="#modulos" class="btn btn-ghost">Explorar funcionalidades</a>
+			</div>
+
+			<div class="stats">
+				<article class="stat-card">
+					<p class="stat-number" data-target="8">0</p>
+					<p class="stat-label">módulos principais</p>
+				</article>
+				<article class="stat-card">
+					<p class="stat-number" data-target="4">0</p>
+					<p class="stat-label">etapas no fluxo de correção</p>
+				</article>
+				<article class="stat-card">
+					<p class="stat-number" data-target="100">0</p>
+					<p class="stat-label">foco em responsividade</p>
+				</article>
+			</div>
+		</section>
+
+		<section id="sobre" class="panel reveal">
+			<h2>O que é o CorreX?</h2>
+			<p>
+				O CorreX é um sistema voltado para professores que precisam avaliar redações com mais consistência.
+				Ele combina análise automática e ajustes manuais para oferecer feedback estruturado aos alunos.
+			</p>
+			<div class="grid two-col">
+				<article class="info-card">
+					<h3>Para quem foi pensado</h3>
+					<p>Professores e equipes pedagógicas que trabalham com produção textual em turmas grandes.</p>
+				</article>
+				<article class="info-card">
+					<h3>Problema que resolve</h3>
+					<p>Reduz o tempo operacional da correção e melhora a qualidade do retorno dado ao estudante.</p>
+				</article>
+			</div>
+		</section>
+
+		<section id="modulos" class="panel reveal">
+			<h2>Módulos do sistema</h2>
+			<div class="grid cards">
+				<article class="feature-card"><h3>Login</h3><p>Acesso seguro para professores.</p></article>
+				<article class="feature-card"><h3>Dashboard</h3><p>Visão geral com métricas e correções recentes.</p></article>
+				<article class="feature-card"><h3>Correção</h3><p>Análise da IA, nota por critério e ajuste manual.</p></article>
+				<article class="feature-card"><h3>Revisão</h3><p>Refinamento do feedback antes do envio final.</p></article>
+				<article class="feature-card"><h3>Turmas</h3><p>Organização das classes e acompanhamento coletivo.</p></article>
+				<article class="feature-card"><h3>Alunos</h3><p>Histórico individual de desempenho.</p></article>
+				<article class="feature-card"><h3>Critérios</h3><p>Configuração de pesos de avaliação.</p></article>
+				<article class="feature-card"><h3>Upload</h3><p>Envio rápido de redações para processamento.</p></article>
+			</div>
+		</section>
+
+		<section id="planos" class="panel reveal">
+			<h2>Planos</h2>
+			<p>Modelos de contratação para diferentes perfis de uso.</p>
+			<div class="grid pricing-grid">
+				<article class="pricing-card">
+					<p class="pricing-tag">Professor autônomo</p>
+					<h3>Plano mensal</h3>
+					<p class="pricing-value">R$ 20<span>/mês</span></p>
+					<ul>
+						<li>Correção com IA e ajustes manuais</li>
+						<li>Dashboard com desempenho de alunos</li>
+						<li>Gerenciamento de turmas e critérios</li>
+					</ul>
+				</article>
+
+				<article class="pricing-card pricing-card-featured">
+					<p class="pricing-tag">Escolas e redes</p>
+					<h3>Licenciaturas institucionais</h3>
+					<p class="pricing-value">Sob consulta</p>
+					<ul>
+						<li>Planos bimestrais, trimestrais ou semestrais</li>
+						<li>Atendimento para múltiplas turmas e professores</li>
+						<li>Escopo ajustado por volume de redações</li>
+					</ul>
+				</article>
+			</div>
+		</section>
+
+		<section id="diferenciais" class="panel reveal">
+			<h2>Diferenciais técnicos</h2>
+			<ul class="checklist">
+				<li>Arquitetura moderna com React e Vite.</li>
+				<li>Serviço separado por domínio (auth, dashboard, critérios, turmas e redações).</li>
+				<li>Layout dark com abordagem mobile-first e breakpoints consistentes.</li>
+				<li>Feedback detalhado por critério, com transparência da nota final.</li>
+			</ul>
+		</section>
+
+	</main>
+
+	<footer class="footer reveal">
+		<p>Projeto acadêmico CorreX | Apresentação de sistema web para correção de redações.</p>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
