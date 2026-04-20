@@ -3,130 +3,557 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CorreX | Landing de Apresentação</title>
+	<title>CorreX — Correção de redações com IA para escolas e professores</title>
+	<meta name="description" content="Plataforma SaaS de correção de redações com inteligência artificial. Reduza em até 80% o tempo de correção e entregue feedback estruturado em escala.">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
+
+	<!-- Evita flash de tema incorreto antes do CSS aplicar -->
+	<script>
+		(function () {
+			try {
+				var t = localStorage.getItem('correx-landing-theme') || 'dark';
+				document.documentElement.setAttribute('data-theme', t);
+			} catch (e) {
+				document.documentElement.setAttribute('data-theme', 'dark');
+			}
+		})();
+	</script>
 </head>
 <body>
-	<div class="bg-orb bg-orb-one" aria-hidden="true"></div>
-	<div class="bg-orb bg-orb-two" aria-hidden="true"></div>
 
+	<!-- ══════════════ TOPBAR ══════════════ -->
 	<header class="topbar">
-		<a href="#inicio" class="brand">CorreX</a>
+		<a href="#inicio" class="brand" aria-label="CorreX — página inicial">
+			<span class="brand-mark" aria-hidden="true">
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M20 6L9 17l-5-5"/>
+				</svg>
+			</span>
+			<span class="brand-text">CorreX</span>
+		</a>
+
 		<nav class="menu" aria-label="Menu principal">
 			<a href="#sobre">Sobre</a>
 			<a href="#modulos">Módulos</a>
+			<a href="#fluxo">Como funciona</a>
 			<a href="#planos">Planos</a>
-			<a href="#diferenciais">Diferenciais</a>
 		</nav>
+
+		<div class="topbar-actions">
+			<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar tema claro/escuro">
+				<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<circle cx="12" cy="12" r="4"/>
+					<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+				</svg>
+				<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+				</svg>
+			</button>
+			<a href="#planos" class="btn btn-primary btn-sm">Acessar demo</a>
+		</div>
 	</header>
 
 	<main>
+
+		<!-- ══════════════ HERO ══════════════ -->
 		<section id="inicio" class="hero reveal">
-			<p class="eyebrow">Plataforma de correção de redações com IA</p>
-			<h1>Uma experiência completa para professores corrigirem, revisarem e acompanharem o desempenho com agilidade.</h1>
-			<p class="hero-copy">
-				Esta landing page apresenta o sistema CorreX para demonstração acadêmica: da autenticação até a avaliação por critérios,
-				com dashboard de acompanhamento e organização de turmas.
-			</p>
+			<div class="hero-text">
+				<span class="tag">
+					<span class="tag-dot" aria-hidden="true"></span>
+					Correção inteligente para escolas de idiomas e cursinhos
+				</span>
 
-			<div class="hero-cta">
-				<a href="#modulos" class="btn btn-primary">Ver funcionalidades</a>
-				<a href="#modulos" class="btn btn-ghost">Explorar funcionalidades</a>
+				<h1>Corrija redações com <span class="accent-text">IA</span>, sem abrir mão do olhar do professor.</h1>
+
+				<p class="lead">
+					CorreX combina análise automática por critérios com ajuste manual,
+					devolvendo feedback estruturado aos alunos em uma fração do tempo de uma correção tradicional.
+				</p>
+
+				<div class="hero-cta">
+					<a href="#modulos" class="btn btn-primary">Ver funcionalidades</a>
+					<a href="#fluxo" class="btn btn-ghost">Como funciona</a>
+				</div>
+
+				<ul class="hero-bullets">
+					<li>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+						Digitação direta ou upload de arquivos
+					</li>
+					<li>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+						Feedback por critério em segundos
+					</li>
+					<li>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+						Critérios totalmente personalizáveis
+					</li>
+				</ul>
 			</div>
 
-			<div class="stats">
-				<article class="stat-card">
-					<p class="stat-number" data-target="8">0</p>
-					<p class="stat-label">módulos principais</p>
-				</article>
-				<article class="stat-card">
-					<p class="stat-number" data-target="4">0</p>
-					<p class="stat-label">etapas no fluxo de correção</p>
-				</article>
-				<article class="stat-card">
-					<p class="stat-number" data-target="100">0</p>
-					<p class="stat-label">foco em responsividade</p>
-				</article>
+			<!-- Mockup do dashboard -->
+			<div class="mockup" aria-hidden="true">
+				<div class="mockup-chrome">
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="dot"></span>
+					<span class="mockup-url">correx.app/dashboard</span>
+				</div>
+				<div class="mockup-body">
+					<aside class="mockup-sidebar">
+						<div class="mockup-brand">
+							<span class="mockup-brand-mark"></span>
+							<span>CorreX</span>
+						</div>
+						<nav class="mockup-nav">
+							<span class="mockup-nav-item active">Dashboard</span>
+							<span class="mockup-nav-item">Redações</span>
+							<span class="mockup-nav-item">Turmas</span>
+							<span class="mockup-nav-item">Alunos</span>
+							<span class="mockup-nav-item">Critérios</span>
+						</nav>
+					</aside>
+					<div class="mockup-content">
+						<div class="mockup-header">
+							<div>
+								<p class="mockup-subtitle">Bem-vindo de volta</p>
+								<p class="mockup-title">Visão geral</p>
+							</div>
+							<span class="mockup-pill">Ao vivo</span>
+						</div>
+
+						<div class="mockup-stats">
+							<div class="mockup-stat">
+								<p class="mockup-stat-label">Redações</p>
+								<p class="mockup-stat-value">128</p>
+							</div>
+							<div class="mockup-stat">
+								<p class="mockup-stat-label">Pendentes</p>
+								<p class="mockup-stat-value">12</p>
+							</div>
+							<div class="mockup-stat">
+								<p class="mockup-stat-label">Média</p>
+								<p class="mockup-stat-value">78<small>pts</small></p>
+							</div>
+						</div>
+
+						<div class="mockup-table">
+							<div class="mockup-table-head">
+								<span>Aluno</span>
+								<span>Turma</span>
+								<span>Status</span>
+								<span>Nota</span>
+							</div>
+							<div class="mockup-table-row">
+								<span>Ana Luiza</span>
+								<span>3ºA</span>
+								<span class="badge badge-success">Corrigida</span>
+								<span>88</span>
+							</div>
+							<div class="mockup-table-row">
+								<span>Pedro H.</span>
+								<span>3ºA</span>
+								<span class="badge badge-warning">Em revisão</span>
+								<span>—</span>
+							</div>
+							<div class="mockup-table-row">
+								<span>Ramon S.</span>
+								<span>3ºB</span>
+								<span class="badge badge-success">Corrigida</span>
+								<span>74</span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
+		<!-- ══════════════ STATS STRIP ══════════════ -->
+		<section class="stats-strip reveal" aria-label="Estatísticas principais">
+			<article class="stat-card">
+				<p class="stat-number" data-target="8">0</p>
+				<p class="stat-label">módulos principais</p>
+			</article>
+			<article class="stat-card">
+				<p class="stat-number" data-target="∞">0</p>
+				<p class="stat-label">critérios customizáveis</p>
+			</article>
+			<article class="stat-card">
+				<p class="stat-number" data-target="4">0</p>
+				<p class="stat-label">etapas no fluxo de correção</p>
+			</article>
+			<article class="stat-card">
+				<p class="stat-number" data-target="100" data-suffix="%">0</p>
+				<p class="stat-label">responsivo em mobile e desktop</p>
+			</article>
+		</section>
+
+		<!-- ══════════════ SOBRE ══════════════ -->
 		<section id="sobre" class="panel reveal">
-			<h2>O que é o CorreX?</h2>
-			<p>
-				O CorreX é um sistema voltado para professores que precisam avaliar redações com mais consistência.
-				Ele combina análise automática e ajustes manuais para oferecer feedback estruturado aos alunos.
-			</p>
-			<div class="grid two-col">
+			<div class="panel-header">
+				<p class="eyebrow">Por que o CorreX</p>
+				<h2>Correção em escala, sem abrir mão da qualidade pedagógica</h2>
+				<p class="panel-lead">
+					Correção manual de redações é um dos maiores gargalos operacionais em escolas de idiomas e cursos preparatórios.
+					Turmas crescem, o volume aumenta, mas o tempo do professor continua o mesmo — e a qualidade do feedback acaba pagando o preço.
+					O CorreX automatiza o trabalho repetitivo para que o professor dedique sua expertise ao que realmente importa.
+				</p>
+			</div>
+
+			<div class="grid three-col">
 				<article class="info-card">
-					<h3>Para quem foi pensado</h3>
-					<p>Professores e equipes pedagógicas que trabalham com produção textual em turmas grandes.</p>
+					<span class="info-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="12" cy="12" r="10"/>
+							<path d="M12 6v6l4 2"/>
+						</svg>
+					</span>
+					<h3>Até 80% menos tempo por redação</h3>
+					<p>A análise inicial por IA entrega uma correção pré-estruturada em segundos. O professor revisa, ajusta e aprova — em vez de começar do zero a cada texto.</p>
 				</article>
+
 				<article class="info-card">
-					<h3>Problema que resolve</h3>
-					<p>Reduz o tempo operacional da correção e melhora a qualidade do retorno dado ao estudante.</p>
+					<span class="info-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M9 11l3 3L22 4"/>
+							<path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+						</svg>
+					</span>
+					<h3>Padronização de critérios</h3>
+					<p>Critérios configuráveis aplicados de forma consistente em todas as correções. Chega de variação de rigor entre professores ou entre redações do mesmo aluno.</p>
+				</article>
+
+				<article class="info-card">
+					<span class="info-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M3 3v18h18"/>
+							<path d="M7 14l4-4 4 4 5-5"/>
+						</svg>
+					</span>
+					<h3>Decisões baseadas em dados</h3>
+					<p>Dashboard com desempenho por aluno, turma e critério. Identifique padrões de dificuldade e direcione o plano pedagógico com precisão.</p>
+				</article>
+
+				<article class="info-card">
+					<span class="info-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+						</svg>
+					</span>
+					<h3>Feedback mais rico ao aluno</h3>
+					<p>Comentários detalhados critério a critério, com nota justificada. O aluno entende exatamente onde perdeu pontos e como melhorar.</p>
+				</article>
+
+				<article class="info-card">
+					<span class="info-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+							<circle cx="9" cy="7" r="4"/>
+							<path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+						</svg>
+					</span>
+					<h3>Escala sem aumentar o time</h3>
+					<p>Atenda mais turmas, mais alunos e mais redações sem contratar mais corretores. O custo operacional por redação despenca.</p>
+				</article>
+
+				<article class="info-card">
+					<span class="info-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+							<path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+							<line x1="6" y1="1" x2="6" y2="4"/>
+							<line x1="10" y1="1" x2="10" y2="4"/>
+							<line x1="14" y1="1" x2="14" y2="4"/>
+						</svg>
+					</span>
+					<h3>Professor no controle final</h3>
+					<p>A IA sugere, o professor decide. Toda nota e comentário podem ser ajustados antes do envio — mantendo o critério humano como palavra final.</p>
 				</article>
 			</div>
 		</section>
 
+		<!-- ══════════════ MÓDULOS ══════════════ -->
 		<section id="modulos" class="panel reveal">
-			<h2>Módulos do sistema</h2>
+			<div class="panel-header">
+				<p class="eyebrow">Módulos</p>
+				<h2>Tudo que um professor precisa, em um só lugar</h2>
+				<p class="panel-lead">
+					Oito módulos conectados por uma navegação lateral simples, estilo Notion.
+					Cada tela foi desenhada para uma única tarefa — sem distrações.
+				</p>
+			</div>
+
 			<div class="grid cards">
-				<article class="feature-card"><h3>Login</h3><p>Acesso seguro para professores.</p></article>
-				<article class="feature-card"><h3>Dashboard</h3><p>Visão geral com métricas e correções recentes.</p></article>
-				<article class="feature-card"><h3>Correção</h3><p>Análise da IA, nota por critério e ajuste manual.</p></article>
-				<article class="feature-card"><h3>Revisão</h3><p>Refinamento do feedback antes do envio final.</p></article>
-				<article class="feature-card"><h3>Turmas</h3><p>Organização das classes e acompanhamento coletivo.</p></article>
-				<article class="feature-card"><h3>Alunos</h3><p>Histórico individual de desempenho.</p></article>
-				<article class="feature-card"><h3>Critérios</h3><p>Configuração de pesos de avaliação.</p></article>
-				<article class="feature-card"><h3>Upload</h3><p>Envio rápido de redações para processamento.</p></article>
+				<article class="feature-card">
+					<span class="feature-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<rect x="3" y="11" width="18" height="11" rx="2"/>
+							<path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+						</svg>
+					</span>
+					<h3>Login</h3>
+					<p>Acesso seguro e controle de permissões para professores e coordenação.</p>
+				</article>
+
+				<article class="feature-card">
+					<span class="feature-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<rect x="3" y="3" width="7" height="9"/>
+							<rect x="14" y="3" width="7" height="5"/>
+							<rect x="14" y="12" width="7" height="9"/>
+							<rect x="3" y="16" width="7" height="5"/>
+						</svg>
+					</span>
+					<h3>Dashboard</h3>
+					<p>Visão geral com métricas, correções pendentes e desempenho por turma.</p>
+				</article>
+
+				<article class="feature-card">
+					<span class="feature-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M12 20h9"/>
+							<path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+						</svg>
+					</span>
+					<h3>Correção</h3>
+					<p>Análise da IA, nota por critério e espaço para ajuste manual do professor.</p>
+				</article>
+
+				<article class="feature-card">
+					<span class="feature-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+							<circle cx="12" cy="12" r="3"/>
+						</svg>
+					</span>
+					<h3>Revisão</h3>
+					<p>Refinamento do feedback antes do envio final ao aluno.</p>
+				</article>
+
+				<article class="feature-card">
+					<span class="feature-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+							<circle cx="9" cy="7" r="4"/>
+							<path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+						</svg>
+					</span>
+					<h3>Turmas</h3>
+					<p>Organização de classes e acompanhamento coletivo do desempenho.</p>
+				</article>
+
+				<article class="feature-card">
+					<span class="feature-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+							<circle cx="12" cy="7" r="4"/>
+						</svg>
+					</span>
+					<h3>Alunos</h3>
+					<p>Histórico individual: evolução, médias e redações anteriores.</p>
+				</article>
+
+				<article class="feature-card">
+					<span class="feature-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M9 11l3 3L22 4"/>
+							<path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+						</svg>
+					</span>
+					<h3>Critérios</h3>
+					<p>Crie, edite e selecione quantos critérios precisar. Configure pesos, pontuações e descrições para cada um.</p>
+				</article>
+
+				<article class="feature-card">
+					<span class="feature-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+							<polyline points="14 2 14 8 20 8"/>
+							<line x1="9" y1="15" x2="15" y2="15"/>
+							<line x1="9" y1="18" x2="13" y2="18"/>
+						</svg>
+					</span>
+					<h3>Entrada de redação</h3>
+					<p>Digite direto na plataforma, faça upload de PDF digital ou envie redações manuscritas escaneadas.</p>
+				</article>
 			</div>
 		</section>
 
+		<!-- ══════════════ FLUXO / COMO FUNCIONA ══════════════ -->
+		<section id="fluxo" class="panel reveal">
+			<div class="panel-header">
+				<p class="eyebrow">Como funciona</p>
+				<h2>Do envio ao feedback, em 4 etapas</h2>
+				<p class="panel-lead">
+					Um fluxo pensado para eliminar o atrito: o professor envia, a IA analisa, o professor ajusta e o aluno recebe.
+				</p>
+			</div>
+
+			<ol class="steps">
+				<li class="step-card">
+					<span class="step-number">01</span>
+				<h3>Envio da redação</h3>
+				<p>O professor digita a redação diretamente na plataforma, faz upload de um PDF digital ou envia uma redação manuscrita escaneada — o sistema identifica o formato e processa automaticamente.</p>
+				</li>
+				<li class="step-card">
+					<span class="step-number">02</span>
+					<h3>Análise por IA</h3>
+				<p>A inteligência artificial avalia o texto contra os critérios configurados pela instituição, atribui notas e gera comentários por aspecto avaliado.</p>
+				</li>
+				<li class="step-card">
+					<span class="step-number">03</span>
+					<h3>Revisão do professor</h3>
+					<p>Você ajusta notas, refina comentários e adiciona observações pessoais. A IA sugere — o professor decide.</p>
+				</li>
+				<li class="step-card">
+					<span class="step-number">04</span>
+					<h3>Devolutiva ao aluno</h3>
+					<p>O aluno recebe um feedback estruturado, critério por critério, com a nota final transparente e justificada.</p>
+				</li>
+			</ol>
+		</section>
+
+		<!-- ══════════════ PLANOS ══════════════ -->
 		<section id="planos" class="panel reveal">
-			<h2>Planos</h2>
-			<p>Modelos de contratação para diferentes perfis de uso.</p>
+			<div class="panel-header">
+				<p class="eyebrow">Planos</p>
+				<h2>Modelos de contratação</h2>
+				<p class="panel-lead">
+					Uma opção enxuta para o professor autônomo e um modelo flexível para escolas e redes de ensino.
+				</p>
+			</div>
+
 			<div class="grid pricing-grid">
 				<article class="pricing-card">
 					<p class="pricing-tag">Professor autônomo</p>
 					<h3>Plano mensal</h3>
 					<p class="pricing-value">R$ 20<span>/mês</span></p>
-					<ul>
-						<li>Correção com IA e ajustes manuais</li>
-						<li>Dashboard com desempenho de alunos</li>
-						<li>Gerenciamento de turmas e critérios</li>
+					<ul class="pricing-list">
+						<li>
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+							Correção com IA e ajustes manuais
+						</li>
+						<li>
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+							Dashboard com desempenho por aluno
+						</li>
+						<li>
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+							Gerenciamento de turmas e critérios
+						</li>
+						<li>
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+							Até 3 turmas simultâneas
+						</li>
 					</ul>
+					<a href="#" class="btn btn-ghost btn-block">Começar</a>
 				</article>
 
 				<article class="pricing-card pricing-card-featured">
-					<p class="pricing-tag">Escolas e redes</p>
-					<h3>Licenciaturas institucionais</h3>
+					<p class="pricing-tag pricing-tag-featured">Recomendado para escolas</p>
+					<h3>Licença institucional</h3>
 					<p class="pricing-value">Sob consulta</p>
-					<ul>
-						<li>Planos bimestrais, trimestrais ou semestrais</li>
-						<li>Atendimento para múltiplas turmas e professores</li>
-						<li>Escopo ajustado por volume de redações</li>
+					<ul class="pricing-list">
+						<li>
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+							Planos bimestrais, trimestrais ou semestrais
+						</li>
+						<li>
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+							Múltiplas turmas e professores
+						</li>
+						<li>
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+							Escopo ajustado por volume de redações
+						</li>
+						<li>
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+							Suporte dedicado à coordenação
+						</li>
 					</ul>
+					<a href="#" class="btn btn-primary btn-block">Falar com o time</a>
 				</article>
 			</div>
 		</section>
 
+		<!-- ══════════════ DIFERENCIAIS ══════════════ -->
 		<section id="diferenciais" class="panel reveal">
-			<h2>Diferenciais técnicos</h2>
+			<div class="panel-header">
+				<p class="eyebrow">Diferenciais</p>
+				<h2>Por que instituições escolhem o CorreX</h2>
+				<p class="panel-lead">
+					Mais do que uma ferramenta de correção, uma plataforma pensada para integrar o dia a dia pedagógico.
+				</p>
+			</div>
+
 			<ul class="checklist">
-				<li>Arquitetura moderna com React e Vite.</li>
-				<li>Serviço separado por domínio (auth, dashboard, critérios, turmas e redações).</li>
-				<li>Layout dark com abordagem mobile-first e breakpoints consistentes.</li>
-				<li>Feedback detalhado por critério, com transparência da nota final.</li>
+				<li>
+					<span class="checklist-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+					</span>
+					<div>
+						<strong>IA treinada para correção pedagógica</strong>
+						<p>Análise contextual que considera coesão, coerência, argumentação e adequação linguística — não apenas ortografia e gramática.</p>
+					</div>
+				</li>
+				<li>
+					<span class="checklist-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+					</span>
+					<div>
+						<strong>Aceita qualquer formato de entrega</strong>
+						<p>Digitação direta na plataforma, upload de PDF digital ou envio de redação manuscrita escaneada — o sistema se adapta ao fluxo da sua escola.</p>
+					</div>
+				</li>
+				<li>
+					<span class="checklist-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+					</span>
+					<div>
+						<strong>Critérios totalmente personalizáveis</strong>
+						<p>Configure os critérios de avaliação conforme o modelo da sua instituição — ENEM, Cambridge, TOEFL, proficiência própria, o que for.</p>
+					</div>
+				</li>
+				<li>
+					<span class="checklist-icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+					</span>
+					<div>
+						<strong>Transparência total na nota</strong>
+						<p>Cada ponto da nota final é rastreável até o critério que o gerou. Sem caixa-preta para o aluno e sem contestações difíceis de justificar.</p>
+					</div>
+				</li>
 			</ul>
 		</section>
 
+
+
 	</main>
 
+	<!-- ══════════════ FOOTER ══════════════ -->
 	<footer class="footer reveal">
-		<p>Projeto acadêmico CorreX | Apresentação de sistema web para correção de redações.</p>
+		<div class="footer-inner">
+			<div class="footer-brand">
+				<span class="brand-mark" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M20 6L9 17l-5-5"/>
+					</svg>
+				</span>
+				<span>CorreX</span>
+			</div>
+			<p>Plataforma de correção de redações com inteligência artificial para instituições de ensino e professores.</p>
+			<div class="footer-links">
+				<a href="#sobre">Sobre</a>
+				<a href="#modulos">Módulos</a>
+				<a href="#fluxo">Como funciona</a>
+				<a href="#planos">Planos</a>
+			</div>
+			<p class="footer-copy">© 2025 CorreX. Todos os direitos reservados.</p>
+		</div>
 	</footer>
 
 	<script src="script.js"></script>
